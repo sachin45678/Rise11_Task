@@ -1,74 +1,46 @@
-<<<<<<< HEAD
-# Rise11_Task
-=======
-# Getting Started with Create React App
+# Dashboard Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **Approach to Building the Dashboard**
+- Designed a dynamic dashboard for managing complaints based on user roles such as **JEs**.
+- Implemented filtering options using tabs to organize cases into categories like "Open", "Closed", and "Pending".
+- Dynamically displayed user-specific data using API calls after login.
+- Restricted access to buttons (e.g., **Case Upload**, **Generate Report**, **Broadcast Message**) based on the logged-in user's role.
+- Designed the UI with a professional and intuitive layout for better user experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Challenges Faced and Resolutions**
 
-### `npm start`
+### 1. **Dynamic Role-Based UI**
+- **Challenge**: Conditionally hiding buttons for specific roles.
+- **Resolution**: Added conditional rendering logic in React using a `role` property fetched from the API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. **Fetching and Displaying User-Specific Data**
+- **Challenge**: API response delays caused data inconsistencies on the dashboard.
+- **Resolution**: Introduced loading states and error handling mechanisms in API calls to ensure smooth rendering.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. **Routing Integration**
+- **Challenge**: React Router was not properly syncing with the dashboard pages.
+- **Resolution**: Corrected the routing paths and ensured each page component was registered in the Router.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Assumptions Made**
+1. Users have predefined roles like **Admin**, **JE**, or **Viewer**.
+2. The backend API securely provides the logged-in user's details and complaint data.
+3. All user actions (like uploading or editing cases) comply with the role-based permissions.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **Tech Stack**
+- **Frontend**: React (Vite Framework)
+- **Backend**: Node.js with Express (API Integration)
+- **Database**: MongoDB
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> fedddc5 (Initial commit)
+## **How to Run the Project**
+1. Clone the repository:  
+   ```bash
+   git clone <repository-url>
+   cd project-directory
